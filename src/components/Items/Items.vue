@@ -70,7 +70,7 @@
     },
     mounted(){
       var _this = this;
-      this.$http.get("http://192.168.2.103:8080/api/0").then(function (res) {
+      this.$http.get("http://localhost:8080/api/0").then(function (res) {
         _this.content = res.data.data[1];
         _this.banner = res.data.data[0]
       });
@@ -93,7 +93,7 @@
       clicks(key, e){
         this.index=key
         var _this = this
-        _this.$http.get("http://192.168.2.103:8080/api/" + key).then(function (res) {
+        _this.$http.get("http://localhost:8080/api/" + key).then(function (res) {
           _this.content = res.data.data[1];
           _this.banner = res.data.data[0];
         });
